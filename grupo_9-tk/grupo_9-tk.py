@@ -33,7 +33,7 @@ def salir():
 root = tk.Tk()
 root.title("Página de Inicio Interactiva del Grupo 9")
 root.geometry("900x600")
-root.configure(bg="yellow")  # Color verde claro para la ventana principal
+root.configure(bg="grey")  # Color verde claro para la ventana principal
 root.minsize(800,450)
 root.iconbitmap("d:/TKINDER-INFO2024/grupo9/grupo_9-tk/favicon.ico")
 root.resizable(False,True)
@@ -50,7 +50,7 @@ label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
 menu_bar = Menu(root, bg="red", fg="brown")#no funciona color
 root.config(menu=menu_bar)
 
-menu_navegacion = Menu(menu_bar, tearoff=0, bg="lightblue", fg="black",
+menu_navegacion = Menu(menu_bar, tearoff=0, bg="lightblue", fg="blue",
                        activebackground="white", activeforeground="black")
 menu_bar.add_cascade(label="Navegar", menu=menu_navegacion, background="orange")  # Fondo celeste para "Navegar"
 menu_navegacion.add_command(label="Sección 1", command=mostrar_seccion1)
@@ -61,10 +61,10 @@ menu_navegacion.add_command(label="Salir", command=salir)
 
 # Etiqueta principal
 etiqueta_principal = tk.Label(root, text="INFORMATORIO 2024 - COMISION 4",
-                              font=('Arial', 25), fg="black", bg="lightgrey")
+                              font=('Arial', 25, "bold"), fg="black", bg="lightgrey")
 etiqueta_principal.pack(pady=30)
 etiqueta_principal = tk.Label(root, text="Bienvenido a la Página de Inicio del Grupo 9",
-                              font=('Arial', 25), fg="black", bg="lightgrey")
+                              font=('Arial', 25,"bold"), fg="black", bg="lightgrey")
 etiqueta_principal.pack(pady=10)
 
 # Crear Listbox y agregarlo a la esquina inferior derecha
@@ -76,7 +76,7 @@ titulo = tk.Label(root, text="Grupo 9", font=('arial', 14))
 titulo.place(relx=1.0, rely=1.0, anchor='se', x=-60, y=-180)
 
 # Lista de nombres de los integrantes
-integrantes = ["Noemi Ciscka", "Burgos Mauricio", "Esteban Ayala", "Yamila"]
+integrantes = ["Noemi Ciscka", "Burgos Mauricio", "Esteban Ayala", "Yamila Fleitas"]
 
 # Agregar los nombres de los integrantes a la lista
 for integrante in integrantes:

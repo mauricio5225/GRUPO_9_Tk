@@ -32,8 +32,11 @@ def salir():
 # ventana principal
 root = tk.Tk()
 root.title("Página de Inicio Interactiva del Grupo 9")
-root.geometry("500x300")
+root.geometry("900x600")
 root.configure(bg="yellow")  # Color verde claro para la ventana principal
+root.minsize(800,450)
+root.iconbitmap("d:/TKINDER-INFO2024/grupo9/grupo_9-tk/favicon.ico")
+
 
 imagen_fondo = Image.open("D:/TKINDER-INFO2024/grupo9/grupo_9-tk/imagen_info.png")
 imagen_fondo = imagen_fondo.resize((500, 300), Image.Resampling.LANCZOS)

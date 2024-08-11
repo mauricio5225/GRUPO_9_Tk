@@ -82,10 +82,6 @@ integrantes = ["Noemi Cicka", "Burgos Mauricio", "Esteban Ayala", "Yamila Fleita
 for integrante in integrantes:
     listbox.insert(tk.END, integrante)
     
-# Etiqueta del reloj
-etiqueta_reloj = tk.Label(root, font=('Arial', 16))
-etiqueta_reloj.place(relx=1.0, rely=0.0, anchor='ne', x=-10, y=10)
-actualizar_reloj()
 
     
 root.mainloop()    

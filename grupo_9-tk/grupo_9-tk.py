@@ -52,7 +52,7 @@ root.config(menu=menu_bar)
 
 menu_navegacion = Menu(menu_bar, tearoff=0, bg="lightblue", fg="blue",
                        activebackground="white", activeforeground="black")
-menu_bar.add_cascade(label="Navegar", menu=menu_navegacion, background="orange")  # Fondo celeste para "Navegar"
+menu_bar.add_cascade(label="Navegar", menu=menu_navegacion, background="orange", foreground = "red")  # Fondo celeste para "Navegar"
 menu_navegacion.add_command(label="Sección 1", command=mostrar_seccion1)
 menu_navegacion.add_command(label="Sección 2", command=mostrar_seccion2)
 menu_navegacion.add_command(label="Sección 3", command=mostrar_seccion3)
@@ -68,7 +68,7 @@ etiqueta_principal = tk.Label(root, text="Bienvenido a la Página de Inicio del 
 etiqueta_principal.pack(pady=10)
 
 # Crear Listbox y agregarlo a la esquina inferior derecha
-listbox = tk.Listbox(root, height=9, width=20)
+listbox = tk.Listbox(root, height=9, width=20, bg= "lightgrey")
 listbox.place(relx=1.0, rely=1.0, anchor='se', x=-20, y=-10)
 
 # Crear título "Grupo 9" y posicionarlo un poco más a la izquierda y abajo
@@ -76,10 +76,16 @@ titulo = tk.Label(root, text="Grupo 9", font=('arial', 14))
 titulo.place(relx=1.0, rely=1.0, anchor='se', x=-60, y=-180)
 
 # Lista de nombres de los integrantes
-integrantes = ["Noemi Ciscka", "Burgos Mauricio", "Esteban Ayala", "Yamila Fleitas"]
+integrantes = ["Noemi Cicka", "Burgos Mauricio", "Esteban Ayala", "Yamila Fleitas", "Wanda Sabadini", "Juan Retamozo"]
 
 # Agregar los nombres de los integrantes a la lista
 for integrante in integrantes:
     listbox.insert(tk.END, integrante)
+    
+# Etiqueta del reloj
+etiqueta_reloj = tk.Label(root, font=('Arial', 16))
+etiqueta_reloj.place(relx=1.0, rely=0.0, anchor='ne', x=-10, y=10)
+actualizar_reloj()
+
     
 root.mainloop()    

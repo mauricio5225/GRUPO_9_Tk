@@ -9,9 +9,12 @@ import tkinter as tk
 from tkinter import Menu
 import time
 from PIL import Image, ImageTk
-from calculadora import mostrar_seccion2
+import reloj
+#from calculadora import mostrar_seccion2
 
-
+# Función para mostrar el reloj
+def mostrar_reloj():
+    reloj.mostrar_reloj(etiqueta_reloj)
     
 # Otras funciones
 def mostrar_seccion1():
@@ -53,6 +56,7 @@ menu_bar.add_cascade(label="Navegar", menu=menu_navegacion, background="orange",
 menu_navegacion.add_command(label="Sección 1", command=mostrar_seccion1)
 menu_navegacion.add_command(label="Sección 2", command=mostrar_seccion2)
 menu_navegacion.add_command(label="Sección 3", command=mostrar_seccion3)
+menu_navegacion.add_command(label="Mostrar Reloj", command=reloj.mostrar_reloj)
 menu_navegacion.add_separator()
 menu_navegacion.add_command(label="Salir", command=salir)
 
@@ -63,6 +67,10 @@ etiqueta_principal.pack(pady=30)
 etiqueta_principal = tk.Label(root, text="Bienvenido a la Página de Inicio del Grupo 9",
                               font=('Arial', 25, "bold"), fg="black", bg="lightgrey")
 etiqueta_principal.pack(pady=10)
+
+etiqueta_reloj = tk.Label(root, font=('Arial', 20), bg="lightblue")
+etiqueta_reloj.place(relx=1.0, rely=0.0, anchor='ne', x=-10, y=10)
+#
 
 # Crear Listbox y agregarlo a la esquina inferior derecha
 listbox = tk.Listbox(root, height=9, width=20, bg="lightgrey")
@@ -79,6 +87,7 @@ integrantes = ["Noemi Cicka", "Burgos Mauricio", "Esteban Ayala", "Yamila Fleita
 for integrante in integrantes:
     listbox.insert(tk.END, integrante)
 
-
+#actualizar_reloj()
+mostrar_reloj()
 
 root.mainloop()

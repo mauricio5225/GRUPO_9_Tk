@@ -10,7 +10,7 @@ from tkinter import Menu
 import time
 from PIL import Image, ImageTk
 import reloj
-#from calculadora import mostrar_seccion2
+from calculadora_w import Calculator
 
 # Función para mostrar el reloj
 def mostrar_reloj():
@@ -19,6 +19,14 @@ def mostrar_reloj():
 # Otras funciones
 def mostrar_seccion1():
     etiqueta_principal.config(text="Ingresaste a la sección 1")
+    
+    # Crear una nueva ventana para la calculadora
+    ventana_calculadora = tk.Toplevel(root)
+    ventana_calculadora.title("Calculadora")
+    
+    # Instanciar la calculadora dentro de la nueva ventana
+    calc = Calculator(ventana_calculadora)
+
 
 def mostrar_seccion2():
     etiqueta_principal.config(text="Ingresaste a la sección 2")

@@ -1,9 +1,8 @@
-# calculadora
 import tkinter as tk
 import math
 
 class Calculator:
-    def _init_(self, root):
+    def __init__(self, root):
         self.root = root
         self.root.title("Calculadora")
         self.root.geometry("400x600")
@@ -68,8 +67,8 @@ class Calculator:
     def clear_display(self):
         self.current_input = ""
         self.update_display()
-
-if _name_ == "_main_":
+if __name__ == "__main__":
     root = tk.Tk()
     calc = Calculator(root)
     root.mainloop()
+    

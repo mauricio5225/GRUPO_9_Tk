@@ -89,7 +89,8 @@ titulo = tk.Label(root, text="Grupo 9", font=('arial', 14))
 titulo.place(relx=1.0, rely=1.0, anchor='se', x=-60, y=-180)
 
 # Lista de nombres de los integrantes
-integrantes = ["Noemi Cicka", "Burgos Mauricio", "Esteban Ayala", "Yamila Fleitas", "Wanda Sabadini", "Juan Retamozo"]
+integrantes = ["Noemi Cicka", "Burgos Mauricio", "Esteban Ayala", "Yamila Fleitas", "Wanda Sabadini",
+               "Valeria Gonzalez","Juan Retamozo"]
 
 # Agregar los nombres de los integrantes a la lista
 for integrante in integrantes:

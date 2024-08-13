@@ -11,6 +11,7 @@ import time
 from PIL import Image, ImageTk
 import reloj
 from calculadora_w import Calculator
+import nuevo_reloj 
 
 # Función para mostrar el reloj
 def mostrar_reloj():
@@ -35,6 +36,15 @@ def mostrar_seccion2():
 def mostrar_seccion3():
     etiqueta_principal.config(text="Ingresaste a la sección 3")
 
+    #Crear una nueva ventana para el reloj
+    ventana_reloj = tk.Toplevel(root)
+    ventana_reloj.title("Reloj")
+    
+    # Instanciar la calculadora dentro de la nueva ventana
+    nuevo_reloj.hora(ventana_reloj)
+
+
+
 def salir():
     root.quit()
     
@@ -44,15 +54,15 @@ root.title("Página de Inicio Interactiva del Grupo 9")
 root.geometry("900x600")
 root.configure(bg="grey")
 root.minsize(800, 450)
-root.iconbitmap("d:/TKINDER-INFO2024/grupo9/grupo_9-tk/favicon.ico")
+#root.iconbitmap("d:/TKINDER-INFO2024/grupo9/grupo_9-tk/favicon.ico")
 
 
-imagen_fondo = Image.open("D:/TKINDER-INFO2024/grupo9/grupo_9-tk/imagen_info.png")
-imagen_fondo = imagen_fondo.resize((500, 300), Image.Resampling.LANCZOS)
-imagen_fondo = ImageTk.PhotoImage(imagen_fondo)
+#imagen_fondo = Image.open("D:/TKINDER-INFO2024/grupo9/grupo_9-tk/imagen_info.png")
+#imagen_fondo = imagen_fondo.resize((500, 300), Image.Resampling.LANCZOS)
+#imagen_fondo = ImageTk.PhotoImage(imagen_fondo)
 
-label_fondo = tk.Label(root, image=imagen_fondo)
-label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+#label_fondo = tk.Label(root, image=imagen_fondo)
+#label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
 
 # armado del menú desplegable
 menu_bar = Menu(root, bg="red", fg="brown")
